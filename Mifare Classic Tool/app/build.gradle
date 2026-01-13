@@ -1,7 +1,5 @@
-plugins {
-    id 'com.android.application' version '8.12.1'
-    id 'org.jetbrains.kotlin.android' version '1.9.0'
-}
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdk 34
@@ -26,16 +24,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
 
-tasks.withType(JavaCompile).configureEach {
-    options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
 }
 
 dependencies {
     implementation "androidx.core:core:1.13.1"
     implementation "androidx.preference:preference:1.2.1"
     implementation "androidx.appcompat:appcompat:1.6.1"
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.5' // 版本根据你的环境调整
-}
+    implementation "com.google.android.material:material:1.12.0"
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // 版本根据你的环境调整
 }

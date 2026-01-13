@@ -6,7 +6,8 @@
     android:id="@+id/constraintLayoutMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+    android:padding="20dp"
+    android:background="?android:attr/colorBackground"
     tools:context="Activities.MainMenu">
 
     <ScrollView
@@ -19,107 +20,221 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <androidx.gridlayout.widget.GridLayout
-            android:id="@+id/gridMainMenu"
+        <LinearLayout
+            android:id="@+id/listMainMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:rowCount="3"
-            android:orientation="horizontal"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:rowOrderPreserved="false"
-            android:useDefaultMargins="true">
+            android:orientation="vertical"
+            android:layoutAnimation="@anim/layout_fade_in">
 
-            <Button
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/buttonMainReadTag"
-                android:layout_width="0dp"
+                style="@style/Widget.Mifare.MenuCard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:drawableTop="@drawable/read_tag"
-                android:onClick="onShowReadTag"
-                android:text="@string/action_read_tag"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/action_read_tag"
+                android:onClick="onShowReadTag">
 
-            <Button
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="18dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/action_read_tag"
+                        app:srcCompat="@drawable/read_tag"
+                        app:tint="?attr/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_read_tag"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="?attr/colorOnSurface"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/buttonMainWriteTag"
-                android:layout_width="0dp"
+                style="@style/Widget.Mifare.MenuCard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:drawableTop="@drawable/write_tag"
-                android:onClick="onShowWriteTag"
-                android:text="@string/action_write_tag"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/action_write_tag"
+                android:onClick="onShowWriteTag">
 
-            <Button
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="18dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/action_write_tag"
+                        app:srcCompat="@drawable/write_tag"
+                        app:tint="?attr/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_write_tag"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="?attr/colorOnSurface"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/buttonMainEditCardDump"
-                android:layout_width="0dp"
+                style="@style/Widget.Mifare.MenuCard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:drawableTop="@drawable/edit_dump"
-                android:onClick="onOpenTagDumpEditor"
-                android:text="@string/action_edit_tag_dump"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/action_edit_tag_dump"
+                android:onClick="onOpenTagDumpEditor">
 
-            <Button
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="18dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/action_edit_tag_dump"
+                        app:srcCompat="@drawable/edit_dump"
+                        app:tint="?attr/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_edit_tag_dump"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="?attr/colorOnSurface"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/buttonMainEditKeyDump"
-                android:layout_width="0dp"
+                style="@style/Widget.Mifare.MenuCard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:drawableTop="@drawable/edit_keys"
-                android:onClick="onOpenKeyEditor"
-                android:text="@string/action_edit_key_dump"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/action_edit_key_dump"
+                android:onClick="onOpenKeyEditor">
 
-            <Button
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="18dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/action_edit_key_dump"
+                        app:srcCompat="@drawable/edit_keys"
+                        app:tint="?attr/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_edit_key_dump"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="?attr/colorOnSurface"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/buttonMainTools"
-                android:layout_width="0dp"
+                style="@style/Widget.Mifare.MenuCard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:drawableTop="@drawable/tools"
-                android:onClick="onShowTools"
-                android:text="@string/action_tools"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                android:layout_marginBottom="12dp"
+                android:contentDescription="@string/action_tools"
+                android:onClick="onShowTools">
 
-            <Button
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="18dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/action_tools"
+                        app:srcCompat="@drawable/tools"
+                        app:tint="?attr/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_tools"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="?attr/colorOnSurface"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/buttonMainHelp"
-                android:layout_width="0dp"
+                style="@style/Widget.Mifare.MenuCard"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:drawableTop="@drawable/help_and_info"
-                android:onClick="onShowHelp"
-                android:text="@string/action_help"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                android:contentDescription="@string/action_help"
+                android:onClick="onShowHelp">
 
-        </androidx.gridlayout.widget.GridLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="18dp">
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/action_help"
+                        app:srcCompat="@drawable/help_and_info"
+                        app:tint="?attr/colorPrimary"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/action_help"
+                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textColor="?attr/colorOnSurface"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
     </ScrollView>
 
     <TextView
         android:id="@+id/textViewMainFooter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textAppearance="?attr/textAppearanceCaption"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingBottom="4dp"
-        android:paddingEnd="14dp"/>
+        android:paddingEnd="10dp"
+        android:textColor="?attr/colorOnBackground"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
