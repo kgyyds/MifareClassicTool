@@ -42,7 +42,6 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -81,10 +80,10 @@ public class MainMenu extends AppCompatActivity {
     private boolean mDonateDialogWasShown = false;
     private boolean mInfoExternalNfcDialogWasShown = false;
     private boolean mHasNoNfc = false;
-    private Button mReadTag;
-    private Button mWriteTag;
-    private Button mKeyEditor;
-    private Button mDumpEditor;
+    private View mReadTag;
+    private View mWriteTag;
+    private View mKeyEditor;
+    private View mDumpEditor;
     private Intent mOldIntent = null;
 
     /**
@@ -117,7 +116,7 @@ public class MainMenu extends AppCompatActivity {
                 + ": " + Common.getVersionCode());
 
         // Add the context menu to the tools button.
-        Button tools = findViewById(R.id.buttonMainTools);
+        View tools = findViewById(R.id.buttonMainTools);
         registerForContextMenu(tools);
 
         // Restore state.
