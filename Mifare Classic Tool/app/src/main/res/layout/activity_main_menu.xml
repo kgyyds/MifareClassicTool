@@ -6,7 +6,8 @@
     android:id="@+id/constraintLayoutMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"
     tools:context="Activities.MainMenu">
 
     <ScrollView
@@ -27,87 +28,75 @@
             android:rowCount="3"
             android:orientation="horizontal"
             android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
             android:rowOrderPreserved="false"
+            android:columnOrderPreserved="false"
             android:useDefaultMargins="true">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonMainReadTag"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:drawableTop="@drawable/read_tag"
+                style="@style/Widget.Mifare.MainMenuButton"
                 android:onClick="onShowReadTag"
                 android:text="@string/action_read_tag"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                app:icon="@drawable/read_tag"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonMainWriteTag"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:drawableTop="@drawable/write_tag"
+                style="@style/Widget.Mifare.MainMenuButton"
                 android:onClick="onShowWriteTag"
                 android:text="@string/action_write_tag"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                app:icon="@drawable/write_tag"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonMainEditCardDump"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:drawableTop="@drawable/edit_dump"
+                style="@style/Widget.Mifare.MainMenuButton"
                 android:onClick="onOpenTagDumpEditor"
                 android:text="@string/action_edit_tag_dump"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                app:icon="@drawable/edit_dump"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonMainEditKeyDump"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:drawableTop="@drawable/edit_keys"
+                style="@style/Widget.Mifare.MainMenuButton"
                 android:onClick="onOpenKeyEditor"
                 android:text="@string/action_edit_key_dump"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                app:icon="@drawable/edit_keys"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonMainTools"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:drawableTop="@drawable/tools"
+                style="@style/Widget.Mifare.MainMenuButton"
                 android:onClick="onShowTools"
                 android:text="@string/action_tools"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                app:icon="@drawable/tools"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonMainHelp"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:drawableTop="@drawable/help_and_info"
+                style="@style/Widget.Mifare.MainMenuButton"
                 android:onClick="onShowHelp"
                 android:text="@string/action_help"
-                android:background="@drawable/btn_rounded"
-                android:padding="16dp"
-                android:textAllCaps="false"/>
+                app:icon="@drawable/help_and_info"/>
 
         </androidx.gridlayout.widget.GridLayout>
     </ScrollView>
@@ -116,10 +105,11 @@
         android:id="@+id/textViewMainFooter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textAppearance="?attr/textAppearanceCaption"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:paddingBottom="4dp"
-        android:paddingEnd="14dp"/>
+        android:paddingEnd="10dp"
+        android:textColor="?attr/colorOnBackground"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
