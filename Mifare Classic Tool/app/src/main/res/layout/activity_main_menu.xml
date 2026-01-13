@@ -48,14 +48,14 @@
                         android:layout_height="36dp"
                         android:layout_marginEnd="16dp"
                         android:contentDescription="@string/action_read_tag"
-                        app:srcCompat="@drawable/read_tag"
+                        app:srcCompat="@drawable/ic_m3_read_tag"
                         app:tint="?attr/colorPrimary"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/action_read_tag"
-                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
                         android:textColor="?attr/colorOnSurface"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -81,14 +81,14 @@
                         android:layout_height="36dp"
                         android:layout_marginEnd="16dp"
                         android:contentDescription="@string/action_write_tag"
-                        app:srcCompat="@drawable/write_tag"
+                        app:srcCompat="@drawable/ic_m3_write_tag"
                         app:tint="?attr/colorPrimary"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/action_write_tag"
-                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
                         android:textColor="?attr/colorOnSurface"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -114,14 +114,14 @@
                         android:layout_height="36dp"
                         android:layout_marginEnd="16dp"
                         android:contentDescription="@string/action_edit_tag_dump"
-                        app:srcCompat="@drawable/edit_dump"
+                        app:srcCompat="@drawable/ic_m3_edit_dump"
                         app:tint="?attr/colorPrimary"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/action_edit_tag_dump"
-                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
                         android:textColor="?attr/colorOnSurface"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -147,14 +147,14 @@
                         android:layout_height="36dp"
                         android:layout_marginEnd="16dp"
                         android:contentDescription="@string/action_edit_key_dump"
-                        app:srcCompat="@drawable/edit_keys"
+                        app:srcCompat="@drawable/ic_m3_keys"
                         app:tint="?attr/colorPrimary"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/action_edit_key_dump"
-                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
                         android:textColor="?attr/colorOnSurface"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -180,14 +180,14 @@
                         android:layout_height="36dp"
                         android:layout_marginEnd="16dp"
                         android:contentDescription="@string/action_tools"
-                        app:srcCompat="@drawable/tools"
+                        app:srcCompat="@drawable/ic_m3_tools"
                         app:tint="?attr/colorPrimary"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/action_tools"
-                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
                         android:textColor="?attr/colorOnSurface"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -212,14 +212,14 @@
                         android:layout_height="36dp"
                         android:layout_marginEnd="16dp"
                         android:contentDescription="@string/action_help"
-                        app:srcCompat="@drawable/help_and_info"
+                        app:srcCompat="@drawable/ic_m3_help"
                         app:tint="?attr/colorPrimary"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/action_help"
-                        android:textAppearance="?attr/textAppearanceTitleMedium"
+                        android:textAppearance="?attr/textAppearanceTitleLarge"
                         android:textColor="?attr/colorOnSurface"/>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

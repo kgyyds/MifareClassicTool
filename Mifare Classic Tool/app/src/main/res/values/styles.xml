@@ -30,6 +30,7 @@
         <item name="colorOnSurface">@color/color_on_surface</item>
         <item name="android:colorBackground">@color/color_background</item>
         <item name="colorOnBackground">@color/color_on_background</item>
+        <item name="android:textViewStyle">@style/Widget.Mifare.TextView</item>
     </style>
 
     <style name="Widget.Mifare.MenuCard" parent="Widget.MaterialComponents.CardView">
@@ -42,6 +43,11 @@
         <item name="rippleColor">?attr/colorSecondary</item>
         <item name="strokeColor">?attr/colorPrimary</item>
         <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.Mifare.TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">22sp</item>
     </style>
 
     <style name="Widget.Mifare.SurfaceCard" parent="Widget.MaterialComponents.CardView">

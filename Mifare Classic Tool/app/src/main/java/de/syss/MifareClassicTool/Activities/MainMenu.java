@@ -139,6 +139,8 @@ public class MainMenu extends AppCompatActivity {
         mWriteTag = findViewById(R.id.buttonMainWriteTag);
         mKeyEditor = findViewById(R.id.buttonMainEditKeyDump);
         mDumpEditor = findViewById(R.id.buttonMainEditCardDump);
+        mReadTag.setOnClickListener(this::onShowReadTag);
+        mWriteTag.setOnClickListener(this::onShowWriteTag);
 
         initFolders();
         copyStdKeysFiles();
